@@ -45,6 +45,23 @@ const applyExternalLinkTargets = (root = document) => {
     });
 };
 
+// Smooth-scroll to an in-page section while keeping it clear of the fixed header.
+const scrollToSectionWithHeaderOffset = (targetSelector) => {
+    const targetSection = document.querySelector(targetSelector);
+
+    if (!targetSection) return;
+
+    const headerElement = document.querySelector('#header');
+    const shouldApplyHeaderOffset = window.innerWidth < 992;
+    const headerHeight = shouldApplyHeaderOffset && headerElement ? headerElement.offsetHeight : 0;
+    const targetTop = targetSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+    window.scrollTo({
+        top: Math.max(0, targetTop),
+        behavior: 'smooth',
+    });
+};
+
 // Reorder the main sections before the fixed CTA / footer area.
 const applySectionOrder = (order = []) => {
     const wrapperBox = document.querySelector('.wrapper-box');
@@ -112,15 +129,8 @@ const renderBanner = (bannerData) => {
 
         if (typeof bannerData.href === 'string' && bannerData.href.startsWith('#')) {
             linkElement.onclick = (event) => {
-                const targetSection = document.querySelector(bannerData.href);
-
-                if (!targetSection) return;
-
                 event.preventDefault();
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                });
+                scrollToSectionWithHeaderOffset(bannerData.href);
             };
         }
     });
