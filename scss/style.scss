@@ -150,7 +150,7 @@
     .featured-title{
         color: #222222;
         font-size: 16px;
-        margin-top: 12px;
+        margin-top: 8px;
         font-weight: 500;
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -167,6 +167,7 @@
     background-position: 0 2px;
     font-size: 13px;
     text-align: left;
+    margin-top: 4px;
 }
 
 .cht-box{
@@ -309,6 +310,9 @@
     .author-desc{
         color: #212529;
         font-size: 1rem;
+        @media (max-width: 768px) {
+            margin-bottom: 32px;
+        }
     }
 
     .author-card{
@@ -508,6 +512,7 @@
     padding: 1rem;
     text-align: center;
     z-index: 150;
+    transition: transform .24s ease, opacity .24s ease;
     a{
         display: inline-block;
         background-color: #845EF7;
@@ -524,6 +529,11 @@
     }
     &.is-docked{
         position: absolute;
+    }
+    &.is-hidden{
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(calc(100% + 16px));
     }
 }
 

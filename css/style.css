@@ -150,7 +150,7 @@
 .featured-card .featured-title {
   color: #222222;
   font-size: 16px;
-  margin-top: 12px;
+  margin-top: 8px;
   font-weight: 500;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -166,6 +166,7 @@
   background-position: 0 2px;
   font-size: 13px;
   text-align: left;
+  margin-top: 4px;
 }
 
 .cht-box .swiper-slide {
@@ -299,6 +300,11 @@
 .author-box .author-desc {
   color: #212529;
   font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .author-box .author-desc {
+    margin-bottom: 32px;
+  }
 }
 .author-box .author-card {
   position: relative;
@@ -488,6 +494,7 @@
   padding: 1rem;
   text-align: center;
   z-index: 150;
+  transition: transform 0.24s ease, opacity 0.24s ease;
 }
 .fixed-plus a {
   display: inline-block;
@@ -505,6 +512,11 @@
 }
 .fixed-plus.is-docked {
   position: absolute;
+}
+.fixed-plus.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(calc(100% + 16px));
 }
 
 .fixed-plus-placeholder {

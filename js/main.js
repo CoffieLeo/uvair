@@ -565,6 +565,7 @@ const initSectionSwiper = (sectionId, swiperSelector, options = {}) => {
 const setupFixedPlusBehavior = () => {
     const fixedPlus = document.querySelector('.fixed-plus');
     const fixedPlusPlaceholder = document.querySelector('.fixed-plus-placeholder');
+    let lastScrollY = window.scrollY;
 
     const updateFixedPlusState = () => {
         if (!fixedPlus || !fixedPlusPlaceholder) return;
@@ -572,10 +573,20 @@ const setupFixedPlusBehavior = () => {
         const fixedPlusHeight = fixedPlus.offsetHeight;
         const placeholderBottom = fixedPlusPlaceholder.getBoundingClientRect().bottom;
         const shouldDock = placeholderBottom <= window.innerHeight;
+        const currentScrollY = window.scrollY;
+        const scrollDelta = currentScrollY - lastScrollY;
+        const shouldHide = currentScrollY > 40 && scrollDelta < -6;
+        const shouldShow = scrollDelta > 6;
 
         fixedPlusPlaceholder.style.height = `${fixedPlusHeight}px`;
         fixedPlus.classList.toggle('is-docked', shouldDock);
-        fixedPlus.style.transform = 'translateY(0)';
+        if (shouldHide) {
+            fixedPlus.classList.add('is-hidden');
+        } else if (shouldShow) {
+            fixedPlus.classList.remove('is-hidden');
+        }
+
+        lastScrollY = currentScrollY;
     };
 
     updateFixedPlusState();
