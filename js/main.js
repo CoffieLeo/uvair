@@ -466,7 +466,7 @@ const renderQaSection = (qaData) => {
     qaAccordion.innerHTML = qaData.items.map((item, index) => {
         const collapseId = `qaCollapse${index + 1}`;
         const headingId = `qaHeading${index + 1}`;
-        const isOpen = index === 0;
+        const isOpen = window.innerWidth >= 992 && index === 0;
         const isHidden = index >= qaData.initialVisibleCount;
         const questionLabel = [item.questionNumber, item.questionPrefix, item.question]
             .filter(Boolean)
