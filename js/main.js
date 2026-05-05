@@ -305,6 +305,69 @@ const setupChtCardSelection = () => {
     });
 };
 
+// Add lightweight entrance animations for key sections and cards.
+const setupMotionEffects = () => {
+    if (!window.matchMedia || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    document.documentElement.classList.add('js-motion');
+
+    const registerMotion = (selector, className) => {
+        document.querySelectorAll(selector).forEach((element) => {
+            element.classList.add(className);
+        });
+    };
+
+    registerMotion('#bannerLink, #bannerLinkMobile', 'motion-scale-in');
+    registerMotion(
+        '#newsSection .section-title, #featuredSection .section-title, #authorSection .section-title, #chtSection .section-title, #plusSection .section-title, #processSection .section-title, #qaSection .section-title',
+        'motion-fade-up',
+    );
+    registerMotion('#authorSection .author-p, #authorSection .author-desc, #processSection img, #qaSection .qa-load-more', 'motion-fade-up');
+
+    document.querySelectorAll(
+        '#newsSection .swiper, #featuredSection .swiper, #authorSection .swiper, #chtSection .swiper, #plusSection .swiper',
+    ).forEach((element) => {
+        element.classList.add('motion-stagger-group');
+    });
+
+    document.querySelectorAll(
+        '#newsSection .swiper-slide, #featuredSection .swiper-slide, #authorSection .swiper-slide, #chtSection .swiper-slide, #plusSection .swiper-slide, #qaSection .qa-item',
+    ).forEach((element, index) => {
+        element.classList.add('motion-stagger-item');
+        element.style.setProperty('--motion-order', String(index % 6));
+    });
+
+    requestAnimationFrame(() => {
+        document.querySelectorAll('.motion-scale-in').forEach((element) => {
+            element.classList.add('is-visible');
+        });
+    });
+
+    const observer = new IntersectionObserver((entries, currentObserver) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            if (entry.target.classList.contains('motion-stagger-group')) {
+                entry.target.querySelectorAll('.motion-stagger-item').forEach((itemElement) => {
+                    itemElement.classList.add('is-visible');
+                });
+                currentObserver.unobserve(entry.target);
+                return;
+            }
+
+            entry.target.classList.add('is-visible');
+            currentObserver.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.36,
+        rootMargin: '0px 0px -18% 0px',
+    });
+
+    document.querySelectorAll('.motion-fade-up, .motion-stagger-group, #qaSection .motion-stagger-item').forEach((element) => {
+        observer.observe(element);
+    });
+};
+
 // Plus slider renderer.
 const renderPlusSection = (plusData) => {
     const plusSectionTitle = document.querySelector('#plusSectionTitle');
@@ -710,6 +773,7 @@ const initPage = async () => {
     const updateFixedPlusState = setupFixedPlusBehavior();
     setupQaLoadMore(qaConfig, updateFixedPlusState);
     applyExternalLinkTargets();
+    setupMotionEffects();
 };
 
 await initPage();

@@ -78,6 +78,7 @@ window.__PAGE_DATA__ = {
       },
       "items": [
         {
+          "timelineKey": "9EA4043CC4E1FE02021DCE2CD1FA7518",
           "href": "#",
           "image": {
             "src": "img/featured-1.png",
@@ -87,6 +88,7 @@ window.__PAGE_DATA__ = {
           "views": "8,209"
         },
         {
+          "timelineKey": "0891C20B43DE55948F5A591C70A55B1B",
           "href": "#",
           "image": {
             "src": "img/featured-1.png",
@@ -96,6 +98,7 @@ window.__PAGE_DATA__ = {
           "views": "8,209"
         },
         {
+          "timelineKey": "98EB18F7C06FAC4A50AD258F3BC7C1CF",
           "href": "#",
           "image": {
             "src": "img/featured-1.png",
@@ -105,6 +108,7 @@ window.__PAGE_DATA__ = {
           "views": "8,209"
         },
         {
+          "timelineKey": "B4798FAF37BBA4FC10D38CB956DC9BAA",
           "href": "#",
           "image": {
             "src": "img/featured-1.png",
@@ -114,6 +118,7 @@ window.__PAGE_DATA__ = {
           "views": "8,209"
         },
         {
+          "timelineKey": "9F0D0076B8E01F55003B27BC520B8033",
           "href": "#",
           "image": {
             "src": "img/featured-1.png",
@@ -123,6 +128,7 @@ window.__PAGE_DATA__ = {
           "views": "8,209"
         },
         {
+          "timelineKey": "1A2FAA7B16F5AFEEAD1A41DD7D20D23E",
           "href": "#",
           "image": {
             "src": "img/featured-1.png",
@@ -139,6 +145,7 @@ window.__PAGE_DATA__ = {
       "description": "投資理財、職場技能、烹飪烘焙、健康健身、親子教養",
       "items": [
         {
+          "projectId": "B6ECA5E34327065B885D38564F3BC0A1",
           "href": "#",
           "image": {
             "src": "img/author-1.png",
@@ -148,6 +155,7 @@ window.__PAGE_DATA__ = {
           "type": "投資理財"
         },
         {
+          "projectId": "3189541C702CD5C7630F39D404164B39",
           "href": "#",
           "image": {
             "src": "img/author-2.png",
@@ -157,6 +165,7 @@ window.__PAGE_DATA__ = {
           "type": "世界冠軍 頂尖調酒師"
         },
         {
+          "projectId": "F0E7557929AAEA03D4365D5C42984742",
           "href": "#",
           "image": {
             "src": "img/author-3.png",
@@ -166,6 +175,7 @@ window.__PAGE_DATA__ = {
           "type": "最高效思考筆記術"
         },
         {
+          "projectId": "C64E4E015E2897A42FAF870BA51D4317",
           "href": "#",
           "image": {
             "src": "img/author-1.png",

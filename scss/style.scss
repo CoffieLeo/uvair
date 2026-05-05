@@ -111,6 +111,36 @@
     }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+    .js-motion{
+        .motion-fade-up,
+        .motion-stagger-item,
+        .motion-scale-in{
+            opacity: 0;
+            will-change: transform, opacity;
+        }
+        .motion-fade-up{
+            transform: translateY(22px);
+            transition: opacity .68s ease, transform .68s cubic-bezier(.22, 1, .36, 1);
+        }
+        .motion-stagger-item{
+            transform: translateY(18px) scale(.985);
+            transition: opacity .58s ease, transform .58s cubic-bezier(.22, 1, .36, 1);
+            transition-delay: calc(var(--motion-order, 0) * 70ms);
+        }
+        .motion-scale-in{
+            transform: scale(.985);
+            transition: opacity .8s ease, transform .8s cubic-bezier(.22, 1, .36, 1);
+        }
+        .motion-fade-up.is-visible,
+        .motion-stagger-item.is-visible,
+        .motion-scale-in.is-visible{
+            opacity: 1;
+            transform: none;
+        }
+    }
+}
+
 .swiper{
     a{
         display: block;
