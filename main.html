@@ -1,0 +1,542 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+<title>momo購物網</title>
+
+  <!--最後更新時間標註，請有調整的同仁記得更新-->
+  <!--2025/12/02，倪翊瑄#3458-->
+
+  <!--共用元件CSS-勿刪-->
+  <link rel="stylesheet" data-title="模組化公版"                    href="https://image.momoshop.com.tw/ecm/img/online/10/007/05/291/images/PD_Layout.min.css?t=1754463138525">
+  <link rel="stylesheet" data-title="Phone選單套件/navlight-v3.10"  href="images/navlight.css">
+  <link rel="stylesheet" data-title="輪播套件v3.10"                 href="images/swiper.min.css">
+  <link rel="stylesheet" data-title="動畫套件"                      href="images/animate.css">
+  <link rel="stylesheet" data-title="ECM入稿登記活動用CSS-v25.0528"  href="images/registerCSS.css" />
+
+  <!--呼叫頁面CSS-勿刪-->
+  <link rel="stylesheet" href="images/uiLayout.css">
+  <link rel="stylesheet" href="images/layout.css">
+
+  <!--google外連字體-勿刪-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    .PD_layout[data-pd-li*=BN] li:hover{
+      filter: unset !important;
+    }
+    @media screen and (min-width: 768px) {
+      .PD_layout[data-pd-li=BN] ul, .PD_layout[data-pd-li=BN-AWD] ul, .PD_layout[data-pd-li=PDBN] ul{
+        grid-gap: 0px !important;
+      }
+      .text {
+          margin-bottom: 0px !important;
+      }
+    }
+  </style>
+</head>
+
+
+<!--手機假天momoLOGO(不是APP顯示)-->
+<div class="Area_header_momologo notAppShow"><a href="https://m.momoshop.com.tw/main.momo" alt="momo購物網"><svg xmlns="http://www.w3.org/2000/svg" width="110" height="17"><path class="logo_svg" d="M47.08 17h-3.25c-3.8 0-6.87-3.08-6.87-6.87V6.89c0-3.8 3.08-6.87 6.87-6.87h3.25c3.8 0 6.87 3.08 6.87 6.87v3.24c.01 3.79-3.07 6.87-6.87 6.87zM44.13 3.87c-1.83 0-3.31 1.48-3.31 3.31v2.64c0 1.83 1.48 3.31 3.31 3.31h2.65c1.83 0 3.31-1.48 3.31-3.31V7.18c0-1.83-1.48-3.31-3.31-3.31h-2.65zM27.23 0h-.63c-1.94 0-3.69.81-4.94 2.1-1.25-1.29-3-2.1-4.94-2.1h-.63c-3.8 0-6.87 3.08-6.87 6.87v10.12h3.86V7.17c0-1.83 1.48-3.31 3.31-3.31h.03c1.83 0 3.31 1.48 3.31 3.31v9.82h3.86V7.17c0-1.83 1.48-3.31 3.31-3.31h.03c1.83 0 3.31 1.48 3.31 3.31v9.82h3.86V6.87C34.11 3.08 31.03 0 27.23 0zM94.68 17h-3.25c-3.8 0-6.87-3.08-6.87-6.87V6.89c0-3.8 3.08-6.87 6.87-6.87h3.25c3.8 0 6.87 3.08 6.87 6.87v3.24c.01 3.79-3.07 6.87-6.87 6.87zM91.73 3.87c-1.83 0-3.31 1.48-3.31 3.31v2.64c0 1.83 1.48 3.31 3.31 3.31h2.65c1.83 0 3.31-1.48 3.31-3.31V7.18c0-1.83-1.48-3.31-3.31-3.31h-2.65zM74.83 0h-.63c-1.94 0-3.69.81-4.94 2.1-1.25-1.29-3-2.1-4.94-2.1h-.63c-3.8 0-6.87 3.08-6.87 6.87v10.12h3.86V7.17c0-1.83 1.48-3.31 3.31-3.31h.03c1.83 0 3.31 1.48 3.31 3.31v9.82h3.86V7.17c0-1.83 1.48-3.31 3.31-3.31h.03c1.83 0 3.31 1.48 3.31 3.31v9.82h3.86V6.87C81.71 3.08 78.63 0 74.83 0z"/></svg></a></div>
+<style>
+  .Area_header_momologo { position: relative; display: none;z-index: 999}
+  .Area_header_momologo a { display:block; padding: 13.5px 0; -webkit-box-sizing: border-box; box-sizing: border-box; width:100%; height:44px; text-align: center; vertical-align: top; background-color:#FAFAFA;}
+  .Area_header_momologo a .logo_svg{ fill:#EA27C2; }
+  @media screen and (min-width: 768px) {.Area_header_momologo { display: none !important;} }
+</style>
+<script>if(!/momoshop/i.test(navigator.userAgent)){document.getElementsByClassName('notAppShow')[0].style.display='block'};//假天不是APP時顯示</script>
+  
+
+
+<style type="text/css">
+	.Area_bn .Area_swiper_box .PD_layout li { flex-shrink: 0; margin: 0; padding: 0; min-width: auto; background-color:rgba(0,0,0,0); border:none; }
+	.Area_swiper_box .PD_layout .PD_layout1 li, .Area_swiper_box .PD_layout li .PD_img img{border-radius: 0px;}
+  .Area_bn4 .Area_swiper .PD_layout {
+    max-height: 400px; /* 根據你的需求設定像素值 */
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 767px){
+
+  /* 僅針對手機版頭區塊 (Area_bn2) 內的 PD_layout 進行滿版設定 */
+  .Area_bn2 .PD_layout {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 確保內部的圖片也能撐滿 */
+  .PD_img img {
+    width: 100%;
+    display: block;
+  }
+
+  /* 限制整個滑動區域的最大高度 */
+  .Area_bn4 .Area_swiper .PD_layout {
+    max-height: 350px; /* 根據你的需求設定像素值 */
+    overflow: hidden;
+  }
+}
+</style>
+
+<body>
+   
+<div class="WRAPPER articleList"> 
+  <!--↓PC黏人精-區塊錨點↓-->
+  <div class="fixarea_tabbar for_pc">
+    <div class="fix_box fix_other">
+      <ul class="Nav-wrapper">
+        <!--<li class="Nav-slide"><a href="javascript:void(0);">自動產生<i></i></a></li>-->
+      </ul>
+    </div>
+    <div class="fix_footer"><a href="javascript:goto('html,body');">TOP</a></div>
+  </div>
+  <!--↑PC黏人精-區塊錨點↑-->
+  
+  <!--Phone選單套件【NavArea_tabbar公版錨點頁籤】-->
+  <div class="NavArea NavArea_tabbar" data-light="icon" data-Btn="" data-num="" data-toptext="" style="" >
+    <div class="Nav_bg"></div>
+    <div class="Nav_box">
+      <div class="Nav_toptext">活動主頁<i></i></div>     
+      <div class="Nav_Btn"><b data-opentext="切換樓層"></b><i></i></div>
+      <div class="Nav">
+        <ul class="Nav-wrapper">
+          <!--<li class="Nav-slide"><a href="javascript:void(0);">自動產生<i></i></a></li>-->
+        </ul>
+        <div class="Nav-slidebg"></div>
+      </div>
+    </div>
+    <div class="Nav_target"></div>
+  </div>   
+
+	<!--回版頭-->
+  <div id="gotop" class="for_phone">TOP</div>
+
+  <!--電腦版PC momoLOGO--><!--白色logo：momologo-white，粉色logo：momologo-pink-->
+  <div class="Area Area1220" >
+    <div class="momologo momologo-white"><a href="https://www.momoshop.com.tw/main/Main.jsp"><svg xmlns="http://www.w3.org/2000/svg"><path d="M59.74 21h-4.01c-4.69 0-8.49-3.8-8.49-8.49v-4c0-4.69 3.8-8.49 8.49-8.49h4.01c4.69 0 8.49 3.8 8.49 8.49v4c.01 4.69-3.8 8.49-8.49 8.49zM56.1 4.78c-2.26 0-4.09 1.83-4.09 4.09v3.26c0 2.26 1.83 4.09 4.09 4.09h3.27c2.26 0 4.09-1.83 4.09-4.09V8.87c0-2.26-1.83-4.09-4.09-4.09H56.1zM35.22 0h-.78c-2.4 0-4.56 1-6.1 2.59A8.486 8.486 0 0 0 22.24 0h-.78c-4.69 0-8.49 3.8-8.49 8.49v12.5h4.77V8.86c0-2.26 1.83-4.09 4.09-4.09h.04c2.26 0 4.09 1.83 4.09 4.09v12.13h4.77V8.86c0-2.26 1.83-4.09 4.09-4.09h.04c2.26 0 4.09 1.83 4.09 4.09v12.13h4.77V8.49c0-4.69-3.81-8.49-8.5-8.49zM118.54 21h-4.01c-4.69 0-8.49-3.8-8.49-8.49v-4c0-4.69 3.8-8.49 8.49-8.49h4.01c4.69 0 8.49 3.8 8.49 8.49v4c.01 4.69-3.8 8.49-8.49 8.49zM114.9 4.78c-2.26 0-4.09 1.83-4.09 4.09v3.26c0 2.26 1.83 4.09 4.09 4.09h3.27c2.26 0 4.09-1.83 4.09-4.09V8.87c0-2.26-1.83-4.09-4.09-4.09h-3.27zM94.02 0h-.78c-2.4 0-4.56 1-6.1 2.59A8.486 8.486 0 0 0 81.04 0h-.78c-4.69 0-8.49 3.8-8.49 8.49v12.5h4.77V8.86c0-2.26 1.83-4.09 4.09-4.09h.04c2.26 0 4.09 1.83 4.09 4.09v12.13h4.77V8.86c0-2.26 1.83-4.09 4.09-4.09h.04c2.26 0 4.09 1.83 4.09 4.09v12.13h4.77V8.49c0-4.69-3.81-8.49-8.5-8.49z"/></svg></a></div>
+  </div>
+    
+
+
+  <!--手機版頭--> 
+  <div class="Area Area_bn2 for_m" data-ts="{'mode':'show', 'start':'2025/03/01 00:00:00', 'end':'2026/03/18 23:59:59'}">  
+    <div class="Area_swiper">
+      <div class="Area_swiper_box">
+        <div class="PD_layout PD_layout1 " data-pd-li="BN" >
+          <div class="lbtclass" id="lbtclass_B02">
+            <div class="btclass" id="bt_B_000_02">
+              <ul class="PD_wrapper">
+                <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+                <li class="PD_slide js-PD_id" data-id="" ><div class="PD"><a class="js-PD_url" data-title="商品連結" data-urlpc="" data-urlphone="" href="" target="_blank"><div class="PD_img"><img class="lazy js-PD_img" data-title="商品圖" data-original="images/0318_m_top1.jpg" alt="" border="0"></div></a></div></li>
+                <li class="PD_slide js-PD_id" data-id=""><div class="PD"><a class="js-PD_url" data-title="商品連結" data-urlpc="" data-urlphone="" href="" target="_blank"><div class="PD_img"><img class="lazy js-PD_img" data-title="商品圖" data-original="images/0318_m_top2.jpg" alt="" border="0"></div></a></div></li>
+                <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of 版頭-->
+
+
+
+  <!--版頭輪播--> 
+  <div class="Area Area_bn2 for_pc" data-ts="{'mode':'show', 'start':'2026/03/019 00:00:00', 'end':'2026/03/30 23:59:59'}"> 
+    <div class="Area_swiper">
+      <div class="Area_swiper_box">
+        <div class="PD_layout PD_layout1" data-pd-li="BN">
+          <div class="lbtclass" id="lbtclass_B50">
+            <div class="btclass" id="bt_B_000_50">
+              <ul class="PD_wrapper">
+                <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+                <li class="PD_slide js-PD_id" data-id="" ><div class="PD"><a class="js-PD_url" data-title="商品連結" data-urlpc="" data-urlphone="" href="" target="_blank"><div class="PD_img"><img class="lazy js-PD_img" data-title="商品圖" data-original="images/0319_pc_top1.jpg" alt="" border="0"></div></a></div></li>
+                <li class="PD_slide js-PD_id" data-id=""><div class="PD"><a class="js-PD_url" data-title="商品連結" data-urlpc="" data-urlphone="" href="" target="_blank"><div class="PD_img"><img class="lazy js-PD_img" data-title="商品圖" data-original="images/0319_pc_top2.jpg" alt="" border="0"></div></a></div></li>
+                <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of 版頭-->
+
+
+  <!--手機版頭--> 
+  <div class="Area Area_bn2 for_m" data-ts="{'mode':'show', 'start':'2026/03/19 00:00:00', 'end':'2026/03/30 23:59:59'}">  
+    <div class="Area_swiper">
+      <div class="Area_swiper_box">
+        <div class="PD_layout PD_layout1 " data-pd-li="BN">
+          <div class="lbtclass" id="lbtclass_B51">
+            <div class="btclass" id="bt_B_000_51">
+              <ul class="PD_wrapper">
+                <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+                <li class="PD_slide js-PD_id" data-id="" ><div class="PD"><a class="js-PD_url" data-title="商品連結" data-urlpc="" data-urlphone="" href="" target="_blank"><div class="PD_img"><img class="lazy js-PD_img" data-title="商品圖" data-original="images/0319_m_top1.jpg" alt="" border="0"></div></a></div></li>
+                <li class="PD_slide js-PD_id" data-id=""><div class="PD"><a class="js-PD_url" data-title="商品連結" data-urlpc="" data-urlphone="" href="" target="_blank"><div class="PD_img"><img class="lazy js-PD_img" data-title="商品圖" data-original="images/0319_m_top2.jpg" alt="" border="0"></div></a></div></li>
+                <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of 版頭-->
+
+
+  <!-- UVAIR -->
+  <div class="Area Area960 js-PC js-navlight_content" data-nav-pc="UVAIR" data-nav-phone="UVAIR">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_1.jpg" alt=""></div>    
+    <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+      <div class="lbtclass" id="lbtclass_B03">
+        <div class="btclass" id="bt_B_000_03">
+          <ul class="PD_wrapper">
+            <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+            <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326">
+                    <div class="PD_img">
+                      <img class="lazy js-PD_img" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/UVAIR_01.jpg" alt="" border="0">
+                    </div>
+                  </a>
+                </div>
+            </li>
+            <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+          </ul>              
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end of UVAIR-->
+
+  <!-- 美肌防曬 -->
+  <div class="Area Area960 js-PC js-navlight_content" data-nav-pc="美肌防曬" data-nav-phone="美肌防曬">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_1.jpg" alt=""></div>    
+    <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+      <div class="lbtclass" id="lbtclass_B031">
+        <div class="btclass" id="bt_B_000_031">
+          <ul class="PD_wrapper">
+            <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+            <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326">
+                    <div class="PD_img">
+                      <img class="lazy js-PD_img" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/UVAIR_02.jpg" alt="" border="0">
+                    </div>
+                  </a>
+                </div>
+            </li>
+            <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+          </ul>              
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of 美肌防曬 -->
+
+  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="獨家新品" data-nav-phone="獨家新品">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div>
+    <div class="for_m lazy mb_bg01" style=""></div>     
+    <!--第三區-區標--> 
+    <div class="text">    
+      <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+        <div class="lbtclass" id="lbtclass_B046">
+          <div class="btclass" id="bt_B_000_046">
+            <ul class="PD_wrapper">
+              <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+              <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <div class="PD_img">
+                    <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_03.jpg" alt="" border="0">
+                  </div>
+                </div>
+              </li>
+              <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="防曬首選" data-nav-phone="防曬首選">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div>
+    <div class="for_m lazy mb_bg01" style=""></div>     
+    <!--第三區-區標--> 
+    <div class="text">    
+      <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+        <div class="lbtclass" id="lbtclass_B040">
+          <div class="btclass" id="bt_B_000_040">
+            <ul class="PD_wrapper">
+              <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+              <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326">
+                    <div class="PD_img">
+                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_04.jpg" alt="" border="0">
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="防曬系列" data-nav-phone="防曬系列">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div>
+    <div class="for_m lazy mb_bg01" style=""></div>     
+    <!--第三區-區標--> 
+    <div class="text">    
+      <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+        <div class="lbtclass" id="lbtclass_B041">
+          <div class="btclass" id="bt_B_000_041">
+            <ul class="PD_wrapper">
+              <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+              <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <div class="PD_img">
+                    <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_05.jpg" alt="" border="0">
+                  </div>
+                </div>
+              </li>
+              <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="新朋友限定" data-nav-phone="新朋友限定">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div>
+    <div class="for_m lazy mb_bg01" style=""></div>     
+    <!--第三區-區標--> 
+    <div class="text">    
+      <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+        <div class="lbtclass" id="lbtclass_B042">
+          <div class="btclass" id="bt_B_000_042">
+            <ul class="PD_wrapper">
+              <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+              <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204876" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204876" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204876">
+                    <div class="PD_img">
+                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_06.jpg" alt="" border="0">
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="今日必敗" data-nav-phone="今日必敗">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div>
+    <div class="for_m lazy mb_bg01" style=""></div>     
+    <!--第三區-區標--> 
+    <div class="text">    
+      <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+        <div class="lbtclass" id="lbtclass_B043">
+          <div class="btclass" id="bt_B_000_043">
+            <ul class="PD_wrapper">
+              <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+              <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <div class="PD_img">
+                    <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_07.jpg" alt="" border="0">
+                  </div>
+                </div>
+              </li>
+              <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="品牌旗艦" data-nav-phone="品牌旗艦">
+    <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div>
+    <div class="for_m lazy mb_bg01" style=""></div>     
+    <!--第三區-區標--> 
+    <div class="text">    
+      <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
+        <div class="lbtclass" id="lbtclass_B044">
+          <div class="btclass" id="bt_B_000_044">
+            <ul class="PD_wrapper">
+              <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
+              <li class="PD_slide js-PD_id" data-id="">
+                <div class="PD">
+                  <a class="js-PD_url" data-title="商品連結" data-urlpc="https://lrp.momoshop.com.tw/main" data-urlphone="https://lrp.momoshop.com.tw/main" href="https://lrp.momoshop.com.tw/main">
+                    <div class="PD_img">
+                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_08.jpg" alt="" border="0">
+                    </div>
+                  </a>
+                </div>
+              </li>
+              <!-- -----------------------------------------------【】入稿貼語法到這邊結束----------------------------------------------- -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <!--橫式公版-->
+
+  <!--------------------------------↓浮層區-登記送活動詳情01-------------------------------->	
+  <div class="blackBox agree_more" id="agree_more">
+    <div class="agreeArea">
+      <div class="box">
+        <h3>登記活動詳情</h3>
+        <div class="txtArea">
+
+          <!-- 浮層標題&活動期間&辦法&說明 -->
+          <div class="container">
+                <ul class="PD_wrapper">
+                  <li class="PD_slide">
+                    <div class="itembox">
+                      <div class="item-information">
+                          <p class="js-PD_val" data-title="活動名稱">女王購物節★滿$3,888登記送3.8%mo幣(上限$150mo幣)</p>
+                      </div>
+                    </div>
+                    <div class="itembox">
+                      <h4 class="item-title"><span class="spcolor" >▌</span>活動期間</h4>
+                      <div class="item-information">
+                          <p class="js-PD_val" data-title="活動期間">3/17-3/18</p>
+                      </div>
+                    </div>
+                    <div class="itembox">
+                      <h4 class="item-title"><span class="spcolor" >▌</span>活動辦法</h4>
+                      <div class="item-information">
+                          <p class="js-PD_val" data-title="活動辦法">購買家居指定商品，單日累積消費滿指定門檻，即可於當日20:00點進行登記，當日消費限當日登記，登記完畢為止。訂單完成3分鐘後開放登記。</p>
+                      </div>
+                    </div>
+                    <div class="itembox">
+                      <h4 class="item-title"><span class="spcolor" >▌</span>活動說明</h4>
+                      <div class="item-information">
+                          <p class="js-PD_val" data-title="活動說明">活動期間至momo購物網購買家居部【登記送】指定商品，滿規定門檻即符合登記資格。消費所購買之商品無付款失敗、訂單取消、退貨等取消交易之情事(且購買商品超過10天鑑賞期)方列入計算。</p>
+                      </div>
+                    </div>                                    
+                  </li>
+                </ul>
+          </div>
+
+          <!-- 登記贈品 -->
+          <div class="itembox itemwrap itemwrap-gift-info">
+            <h4 class="item-title"><span class="spcolor" >▌</span>登記贈品</h4>   
+            <div class="itembox_box">
+                    <ul class="PD_wrapper">
+                      <li class="PD_slide">
+                          <div class="row row-title">
+                            <p>門檻一</p>
+                          </div>
+                          <div class="row row-info">
+                            <p>獎項內容</p>
+                            <p>贈【Apple 蘋果】2021 iPad mini 6 WiFi 8.3吋 64G 平板電腦</p>
+                          </div>
+                          <div class="row row-info">
+                            <p>登記門檻</p>
+                            <p>當日單筆消費消費滿$3000元</p>
+                          </div>
+                          <div class="row row-info">
+                            <p>獎項名額</p>
+                            <p>共1名</p>
+                          </div>
+                          <div class="row row-info">
+                            <p>抽獎日期</p>
+                            <p>2023/4/15 公布</p>
+                          </div>
+                          <div class="row row-info">
+                            <p>寄送時間</p>
+                            <p>2023/5/10 後陸續寄送</p>
+                          </div>
+                      </li>
+
+                    </ul>
+            </div>
+          </div>
+
+          <!-- 注意事項(固定文案) -->
+          <div class="itembox itemwrap itemwrap-list-style notice-list">
+            <h4 class="item-title"><span class="spcolor" >▌</span>注意事項</h4>   
+            <div class="itembox_box">
+              <ul class="PD_wrapper">
+                <li class="PD_slide"><p>非momo購物網會員者，恕不符合活動資格。</p></li>
+                <li class="PD_slide"><p>活動期間至momo購物網消費達到參加活動資格後，若有訂單付款失敗、訂單取消、退貨等情況，恕不符合活動資格。</p></li>
+                <li class="PD_slide"><p>符合活動資格後，需至會員中心\登記活動查詢，完成登記才符合活動資格，未登記完成者，恕不符合活動資格。</p></li>
+                <li class="PD_slide"><p>momo購物網保留修改贈品，活動規則與暫停活動等之權利。</p></li>
+                <li class="PD_slide"><p>部份活動贈品將於活動結束後15天，開始陸續寄送。</p></li>
+                <li class="PD_slide"><p>活動查詢記錄僅包含單一類別商品的滿額登記活動，例如：食品展、美妝展、健康展…等商品類登記活動，不包含每日簽到、天天登記mo好康、全站50%off、票選、雙11…等大型活動登記記錄。</p></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+        <div class="button but-close"><a href="javascript:void(0);">關閉</a></div>
+      </div>
+    </div> 
+    <div class="Boxclose"></div>
+  </div>
+  <!--------------------------------浮層區-登記送活動詳情01-------------------------------->		
+
+	
+  <!--注意事項區-->
+  <div class="edm_notice">
+    <div>優惠商品數量有限，售完為止。本廣告活動頁商品規格、<br class="for_phone">顏色、價位、贈品如與購物車不符，以購物車標示為準。</div>
+    <div class="for_phone apple_notice">活動係由本公司主辦，蘋果公司(Apple Inc.)<br>並非活動贊助商，亦未以任何形式參與本活動。</div>
+    <div>富邦媒體科技股份有限公司&ensp;<br class="for_phone">統編:27365925&ensp;地址:台北市114內湖區洲子街96號4樓</div>
+  </div>
+</div>
+<!--↑RWD wrapper↑-->
+
+  <script charset="utf-8" language="javascript" type="text/javascript" src="https://image.momoshop.com.tw/ecm/js/jquery-1.12.4.js?t=20201119001"></script>	
+	<!--時間開關-->
+  <script charset="utf-8" data-title="指定時間開關物件" language="javascript" type="text/javascript" src="images/timeSwitch.js"></script>
+ 
+  <script data-title="框架-jQuery"        src="https://image.momoshop.com.tw/ecm/js/jquery-1.12.4.js?t=20201119001"></script>
+  <script data-title="功能-延遲載圖"       src="https://image.momoshop.com.tw/ecm/js/edm/lazyload.js?t=202410220001"></script>
+  <script data-title="功能-輪播套件v5.2.1" src="images/swiper.min.js"></script>
+  <script data-title="功能-選單套件v3.10"  src="images/navlight.js"></script>
+  
+  <!-- 呼叫JS -->
+  <script data-title="呼叫JS"        src="images/main.js"></script>
+  <script data-title="輪播套件設定檔" src="images/swiper_main.js"></script>
+  <script data-title="選單套件設定檔" src="images/navlight_main.js"></script>
+  
+  <!-- IT常用機制 --> 
+  <script data-title="彈跳視窗套件(折價券&登記共用)"        src="https://image.momoshop.com.tw/ecm/js/edm/sweetalert2.all.min.js?t=202011170001"></script>
+  <script data-title="www.網址折價券機制(需套彈跳視窗套件)" src="https://image.momoshop.com.tw/ecm/js/edm/getCoupon_ms.js?t=202011170001"></script>
+  <script data-title="登記IT資源檔(需套彈跳視窗套件)"       src="images/registerActivity.v2509.1.js" id="itjs"></script>  
+
+  <!-- (必加) 延遲載圖 -->
+  <script>
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".articleList .lazy", //物件
+        threshold: 0, //預載量 預設300
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        lazyLoadInstance.update(); //DOM結構完成馬上執行
+    }); // DOM結構完成馬上執行
+  </script>	
+  <script src="images/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 500,
+      easing: 'ease-in-sine',
+    });
+  </script>
+</body>
+</html>
