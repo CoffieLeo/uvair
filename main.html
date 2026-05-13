@@ -24,24 +24,26 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     .WRAPPER{
-      background-color: white !important;
+      /* background-color: #6bb5e4 !important; */
+      background: url("images/uvair/uvair-bg.jpg") 0 0 no-repeat;
+      background-attachment: fixed;
     }
     .PD_layout[data-pd-li*=BN] li:hover{
       filter: unset !important;
     }
-    @media screen and (min-width: 768px) {
+    /* @media screen and (min-width: 768px) {
       .PD_layout[data-pd-li=BN] ul, .PD_layout[data-pd-li=BN-AWD] ul, .PD_layout[data-pd-li=PDBN] ul{
         grid-gap: 0px !important;
       }
       .text {
           margin-bottom: 0px !important;
       }
-    }
+    } */
     @media screen and (max-width: 767px) {
-      .PD_layout[data-pd-li=BN] ul, .PD_layout[data-pd-li=BN-AWD] ul, .PD_layout[data-pd-li=PDBN] ul{
+      /* .PD_layout[data-pd-li=BN] ul, .PD_layout[data-pd-li=BN-AWD] ul, .PD_layout[data-pd-li=PDBN] ul{
         grid-gap: 0px !important;
         padding: 0 !important;
-      }
+      } */
       .text {
           margin-bottom: 0 !important;
       }
@@ -208,7 +210,8 @@
 
 
   <!-- UVAIR -->
-  <div class="Area Area960 js-PC js-navlight_content" data-nav-pc="UVAIR" data-nav-phone="UVAIR">
+  <div class="Area Area960 Area_bottom js-PC js-navlight_content" data-nav-pc="UVAIR" data-nav-phone="UVAIR">
+    <img class="lazy" sytle="width: 412px;" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/air.png" alt="" border="0">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_1.jpg" alt=""></div>     -->
     <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
       <div class="lbtclass" id="lbtclass_B03">
@@ -219,7 +222,8 @@
                 <div class="PD">
                   <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326">
                     <div class="PD_img">
-                      <img class="lazy js-PD_img" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/UVAIR_01.jpg" alt="" border="0">
+                      <img class="lazy js-PD_img for_pc" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/uvair_01.png" alt="" border="0">
+                      <img class="lazy js-PD_img for_m" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/uvair_01_m.png" alt="" border="0">
                     </div>
                   </a>
                 </div>
@@ -233,7 +237,7 @@
   <!--end of UVAIR-->
 
   <!-- 美肌防曬 -->
-  <div class="Area Area960 js-PC js-navlight_content" data-nav-pc="美肌防曬" data-nav-phone="美肌防曬">
+  <div class="Area Area960 js-PC js-navlight_content Area_bottom" data-nav-pc="美肌防曬" data-nav-phone="美肌防曬">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_1.jpg" alt=""></div>     -->
     <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
       <div class="lbtclass" id="lbtclass_B031">
@@ -244,7 +248,8 @@
                 <div class="PD">
                   <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326">
                     <div class="PD_img">
-                      <img class="lazy js-PD_img" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/UVAIR_02.jpg" alt="" border="0">
+                      <img class="lazy js-PD_img for_pc" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/uvair_02.png" alt="" border="0">
+                      <img class="lazy js-PD_img for_m" data-title="商品圖" src="images/loadinggif.gif" data-original="images/uvair/uvair_02_m.png" alt="" border="0">
                     </div>
                   </a>
                 </div>
@@ -257,7 +262,7 @@
   </div>
   <!-- end of 美肌防曬 -->
 
-  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="獨家新品" data-nav-phone="獨家新品">
+  <div class="Area Area960 Area_bn js-PC js-navlight_content Area_bottom" data-nav-pc="獨家新品" data-nav-phone="獨家新品">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div> -->
     <!-- <div class="for_m lazy mb_bg01" style=""></div>      -->
     <!--第三區-區標--> 
@@ -265,12 +270,14 @@
       <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
         <div class="lbtclass" id="lbtclass_B046">
           <div class="btclass" id="bt_B_000_046">
+            <img class="lazy js-PD_img" data-title="商品圖" style="width: 80%; margin-bottom: 16px;" src="images/loadinggif.gif" data-original="images/uvair/uvair_03-title.png" alt="" border="0">
             <ul class="PD_wrapper">
               <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
               <li class="PD_slide js-PD_id" data-id="">
                 <div class="PD">
                   <div class="PD_img">
-                    <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_03.jpg" alt="" border="0">
+                    <img class="lazy js-PD_img for_pc" data-title="商品圖" style="width: 80%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_03.png" alt="" border="0">
+                    <img class="lazy js-PD_img for_m" data-title="商品圖" style="width: 100%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_03.png" alt="" border="0">
                   </div>
                 </div>
               </li>
@@ -282,7 +289,7 @@
     </div> 
   </div>
 
-  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="防曬首選" data-nav-phone="防曬首選">
+  <div class="Area Area960 Area_bn js-PC js-navlight_content Area_bottom" data-nav-pc="防曬首選" data-nav-phone="防曬首選">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div> -->
     <!-- <div class="for_m lazy mb_bg01" style=""></div>      -->
     <!--第三區-區標--> 
@@ -290,13 +297,15 @@
       <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
         <div class="lbtclass" id="lbtclass_B040">
           <div class="btclass" id="bt_B_000_040">
+            <img class="lazy js-PD_img" data-title="商品圖" style="width: 80%; margin-bottom: 16px;" src="images/loadinggif.gif" data-original="images/uvair/uvair_04-title.png" alt="" border="0">
             <ul class="PD_wrapper">
               <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
               <li class="PD_slide js-PD_id" data-id="">
                 <div class="PD">
                   <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15228326">
                     <div class="PD_img">
-                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_04.jpg" alt="" border="0">
+                      <img class="lazy js-PD_img for_pc" data-title="商品圖" style="width: 80%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_04.png" alt="" border="0">
+                      <img class="lazy js-PD_img for_m" data-title="商品圖" style="width: 100%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_04_m.png" alt="" border="0">
                     </div>
                   </a>
                 </div>
@@ -309,7 +318,7 @@
     </div> 
   </div>
 
-  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="防曬系列" data-nav-phone="防曬系列">
+  <div class="Area Area960 Area_bn js-PC js-navlight_content Area_bottom" data-nav-pc="防曬系列" data-nav-phone="防曬系列">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div> -->
     <!-- <div class="for_m lazy mb_bg01" style=""></div>      -->
     <!--第三區-區標--> 
@@ -317,18 +326,21 @@
       <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
         <div class="lbtclass" id="lbtclass_B041">
           <div class="btclass" id="bt_B_000_041">
+            <img class="lazy js-PD_img" data-title="商品圖" style="width: 80%; margin-bottom: 16px;" src="images/loadinggif.gif" data-original="images/uvair/uvair_05-title.png" alt="" border="0">
             <ul class="PD_wrapper">
               <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
               <li class="PD_slide js-PD_id" data-id="">
                 <div class="PD">
                   <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4" data-urlphone="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800042&p_orderType=4&sourcePageType=4">
                     <div class="PD_img">
-                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_05-1.jpg" alt="" border="0">
+                      <img class="lazy js-PD_img for_pc" data-title="商品圖" style="width: 80%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_05-1.png" alt="" border="0">
+                      <img class="lazy js-PD_img for_m" data-title="商品圖" style="width: 100%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_05-1_m.png" alt="" border="0">
                     </div>
                   </a>
                   <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800043&p_orderType=4&sourcePageType=4" data-urlphone="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800043&p_orderType=4&sourcePageType=4" href="https://www.momoshop.com.tw/category/DgrpCategory.jsp?d_code=2119800043&p_orderType=4&sourcePageType=4">
                     <div class="PD_img">
-                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_05-2.jpg" alt="" border="0">
+                      <img class="lazy js-PD_img for_pc" data-title="商品圖" style="width: 80%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_05-2.png" alt="" border="0">
+                      <img class="lazy js-PD_img for_m" data-title="商品圖" style="width: 100%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_05-2_m.png" alt="" border="0">
                     </div>
                   </a>
                 </div>
@@ -341,7 +353,7 @@
     </div> 
   </div>
 
-  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="新朋友限定" data-nav-phone="新朋友限定">
+  <div class="Area Area960 Area_bn js-PC js-navlight_content Area_bottom" data-nav-pc="新朋友限定" data-nav-phone="新朋友限定">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div> -->
     <!-- <div class="for_m lazy mb_bg01" style=""></div>      -->
     <!--第三區-區標--> 
@@ -355,7 +367,8 @@
                 <div class="PD">
                   <a class="js-PD_url" data-title="商品連結" data-urlpc="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204876" data-urlphone="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204876" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=15204876">
                     <div class="PD_img">
-                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_06.jpg" alt="" border="0">
+                      <img class="lazy js-PD_img for_pc" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/uvair_06.png" alt="" border="0">
+                      <img class="lazy js-PD_img for_m" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/uvair_06_m.png" alt="" border="0">
                     </div>
                   </a>
                 </div>
@@ -368,7 +381,7 @@
     </div> 
   </div>
 
-  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="今日必敗" data-nav-phone="今日必敗">
+  <div class="Area Area960 Area_bn js-PC js-navlight_content Area_bottom" data-nav-pc="今日必敗" data-nav-phone="今日必敗">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div> -->
     <!-- <div class="for_m lazy mb_bg01" style=""></div>      -->
     <!--第三區-區標--> 
@@ -376,12 +389,13 @@
       <div class="PD_layout" data-pd-col-pc="1" data-pd-col-phone="1" data-pd-li="BN">
         <div class="lbtclass" id="lbtclass_B043">
           <div class="btclass" id="bt_B_000_043">
+            <img class="lazy js-PD_img" data-title="商品圖" style="width: 60%; margin-bottom: 16px;" src="images/loadinggif.gif" data-original="images/uvair/uvair_07-title.png" alt="" border="0">
             <ul class="PD_wrapper">
               <!-- -----------------------------------------------【】入稿貼語法從這邊開始----------------------------------------------- -->
               <li class="PD_slide js-PD_id" data-id="">
                 <div class="PD">
                   <div class="PD_img">
-                    <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_07.jpg" alt="" border="0">
+                    <img class="lazy js-PD_img" data-title="商品圖" style="width: 80%; margin: 0 auto;" src="images/loadinggif.gif" data-original="images/uvair/uvair_07.png" alt="" border="0">
                   </div>
                 </div>
               </li>
@@ -393,7 +407,7 @@
     </div> 
   </div>
 
-  <div class="Area Area960 Area_bn js-PC js-navlight_content" data-nav-pc="品牌旗艦" data-nav-phone="品牌旗艦">
+  <div class="Area Area960 Area_bn js-PC js-navlight_content Area_bottom" data-nav-pc="品牌旗艦" data-nav-phone="品牌旗艦">
     <!-- <div class="for_m" style="position:absolute;height:10vw; z-index: -7;"><img class="lazy" data-original="images/mbg_2.jpg" alt=""></div> -->
     <!-- <div class="for_m lazy mb_bg01" style=""></div>      -->
     <!--第三區-區標--> 
@@ -407,7 +421,7 @@
                 <div class="PD">
                   <a class="js-PD_url" data-title="商品連結" data-urlpc="https://lrp.momoshop.com.tw/main" data-urlphone="https://lrp.momoshop.com.tw/main" href="https://lrp.momoshop.com.tw/main">
                     <div class="PD_img">
-                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/UVAIR_08.jpg" alt="" border="0">
+                      <img class="lazy js-PD_img" data-title="商品圖"  src="images/loadinggif.gif" data-original="images/uvair/uvair_08.png" alt="" border="0">
                     </div>
                   </a>
                 </div>
