@@ -24,9 +24,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     .WRAPPER{
+      position: relative;
+      z-index: 0;
       /* background-color: #6bb5e4 !important; */
-      background: url("images/uvair/uvair-bg.jpg") 0 0 no-repeat;
-      background-attachment: fixed;
+      background: transparent;
+    }
+    .WRAPPER::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("images/uvair/uvair-bg.jpg") center top / cover no-repeat;
+      pointer-events: none;
+      z-index: -1;
     }
     .PD_layout[data-pd-li*=BN] li:hover{
       filter: unset !important;
