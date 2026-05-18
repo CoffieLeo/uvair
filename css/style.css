@@ -1,5 +1,5 @@
 body {
-  font-weight: 400;
+  font-weight: 400 !important;
 }
 
 .wrapper-box {
@@ -319,7 +319,7 @@ body {
 }
 .cht-card .price {
   color: #232323;
-  font-size: 0.7rem;
+  font-size: 14px;
 }
 
 .author-box .author-title {

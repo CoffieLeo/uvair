@@ -1,5 +1,5 @@
 body{
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 .wrapper-box{
     position: relative;
@@ -329,7 +329,7 @@ body{
     }
     .price{
         color: #232323;
-        font-size: .7rem;
+        font-size: 14px;
     }
 }
 
