@@ -1,0 +1,513 @@
+{
+  "order": [
+    "banner",
+    "news",
+    "featured",
+    "plus",
+    "cht",
+    "author",
+    "process",
+    "qa"
+  ],
+  "sections": {
+    "banner": {
+      "href": "#chtSection",
+      "pcImage": {
+        "src": "img/pc-hero.png",
+        "alt": "PPA Plus Banner Desktop"
+      },
+      "mobileImage": {
+        "src": "img/mobile-hero.png",
+        "alt": "PPA Plus Banner Mobile"
+      }
+    },
+    "news": {
+      "title": "最新活動",
+      "items": [
+        {
+          "href": "#",
+          "image": {
+            "src": "img/news-1.png",
+            "alt": "最新活動 1"
+          }
+        },
+        {
+          "href": "#",
+          "image": {
+            "src": "img/news-2.png",
+            "alt": "最新活動 2"
+          }
+        },
+        {
+          "href": "#",
+          "image": {
+            "src": "img/news-3.png",
+            "alt": "最新活動 3"
+          }
+        },
+        {
+          "href": "#",
+          "image": {
+            "src": "img/news-1.png",
+            "alt": "最新活動 4"
+          }
+        },
+        {
+          "href": "#",
+          "image": {
+            "src": "img/news-2.png",
+            "alt": "最新活動 5"
+          }
+        },
+        {
+          "href": "#",
+          "image": {
+            "src": "img/news-3.png",
+            "alt": "最新活動 6"
+          }
+        }
+      ]
+    },
+    "featured": {
+      "title": "精選內容",
+      "link": {
+        "href": "#",
+        "text": "課程清單"
+      },
+      "items": [
+        {
+          "timelineKey": "9EA4043CC4E1FE02021DCE2CD1FA7518",
+          "href": "#",
+          "image": {
+            "src": "img/featured-1.png",
+            "alt": "精選內容 1"
+          },
+          "title": "【牌義】權杖（侍者、騎士、皇后、國王）",
+          "views": "8,209"
+        },
+        {
+          "timelineKey": "0891C20B43DE55948F5A591C70A55B1B",
+          "href": "#",
+          "image": {
+            "src": "img/featured-1.png",
+            "alt": "精選內容 2"
+          },
+          "title": "【牌義】權杖（侍者、騎士、皇后、國王）",
+          "views": "8,209"
+        },
+        {
+          "timelineKey": "98EB18F7C06FAC4A50AD258F3BC7C1CF",
+          "href": "#",
+          "image": {
+            "src": "img/featured-1.png",
+            "alt": "精選內容 3"
+          },
+          "title": "【牌義】權杖（侍者、騎士、皇后、國王）",
+          "views": "8,209"
+        },
+        {
+          "timelineKey": "B4798FAF37BBA4FC10D38CB956DC9BAA",
+          "href": "#",
+          "image": {
+            "src": "img/featured-1.png",
+            "alt": "精選內容 4"
+          },
+          "title": "【牌義】權杖（侍者、騎士、皇后、國王）",
+          "views": "8,209"
+        },
+        {
+          "timelineKey": "9F0D0076B8E01F55003B27BC520B8033",
+          "href": "#",
+          "image": {
+            "src": "img/featured-1.png",
+            "alt": "精選內容 5"
+          },
+          "title": "【牌義】權杖（侍者、騎士、皇后、國王）",
+          "views": "8,209"
+        },
+        {
+          "timelineKey": "1A2FAA7B16F5AFEEAD1A41DD7D20D23E",
+          "href": "#",
+          "image": {
+            "src": "img/featured-1.png",
+            "alt": "精選內容 6"
+          },
+          "title": "【牌義】權杖（侍者、騎士、皇后、國王）",
+          "views": "8,209"
+        }
+      ]
+    },
+    "author": {
+      "title": "專業講師",
+      "lead": "業界職人教學，帶你掌握實用知識與技能",
+      "description": "投資理財、職場技能、烹飪烘焙、健康健身、親子教養",
+      "items": [
+        {
+          "projectId": "B6ECA5E34327065B885D38564F3BC0A1",
+          "href": "#",
+          "image": {
+            "src": "img/author-1.png",
+            "alt": "吳淡如"
+          },
+          "name": "吳淡如",
+          "type": "投資理財"
+        },
+        {
+          "projectId": "3189541C702CD5C7630F39D404164B39",
+          "href": "#",
+          "image": {
+            "src": "img/author-2.png",
+            "alt": "Aki Wang"
+          },
+          "name": "Aki Wang",
+          "type": "世界冠軍 頂尖調酒師"
+        },
+        {
+          "projectId": "F0E7557929AAEA03D4365D5C42984742",
+          "href": "#",
+          "image": {
+            "src": "img/author-3.png",
+            "alt": "閱讀前哨站 瓦基"
+          },
+          "name": "閱讀前哨站 瓦基",
+          "type": "最高效思考筆記術"
+        },
+        {
+          "projectId": "C64E4E015E2897A42FAF870BA51D4317",
+          "href": "#",
+          "image": {
+            "src": "img/author-1.png",
+            "alt": "吳淡如"
+          },
+          "name": "吳淡如",
+          "type": "投資理財"
+        }
+      ]
+    },
+    "cht": {
+      "title": "中華電信優惠方案",
+      "items": [
+        {
+          "variant": "first",
+          "title": "中華電信｜二年租月繳方案",
+          "monthPrice": "NT$ 224",
+          "monthUnit": "/月",
+          "yearPrice": "約 75 折，每年現省 NT$1,800",
+          "buttonText": "立即訂閱",
+          "href": "#"
+        },
+        {
+          "variant": "second",
+          "title": "中華電信｜一年租月繳方案",
+          "monthPrice": "NT$ 249",
+          "monthUnit": "/月",
+          "yearPrice": "約 83 折，每年現省 NT$600",
+          "buttonText": "立即訂閱",
+          "href": "#"
+        },
+        {
+          "variant": "",
+          "title": "中華電信｜一般租月租方案",
+          "monthPrice": "NT$ 299",
+          "monthUnit": "/月",
+          "yearPrice": "",
+          "buttonText": "立即訂閱",
+          "href": "#"
+        }
+      ]
+    },
+    "plus": {
+      "title": "PLUS 會員享有",
+      "subtitle": "進階學習體驗與專屬回饋,讓訂閱價值最大化",
+      "items": [
+        {
+          "title": "多元學習功能",
+          "description": "聲音學習/背景播放、子母畫面、AI字幕輔助、投影學習。",
+          "image": {
+            "src": "img/plus-1.png",
+            "alt": "多元學習功能"
+          }
+        },
+        {
+          "title": "專屬客服通道",
+          "description": "Plus 會員享優先回覆與問題處理。",
+          "image": {
+            "src": "img/plus-2.png",
+            "alt": "專屬客服通道"
+          }
+        },
+        {
+          "title": "獨享優惠券",
+          "description": "連續訂閱 Plus 滿三個月，每月可享一張單課限定 83 折券；生日月再享 7 折優惠券。",
+          "image": {
+            "src": "img/plus-3.png",
+            "alt": "獨享優惠券"
+          }
+        },
+        {
+          "title": "學習回饋機制",
+          "description": "完成任務、連續訂閱即可累積點數，點數可用於抽獎、折抵課程。",
+          "image": {
+            "src": "img/plus-4.png",
+            "alt": "學習回饋機制"
+          }
+        }
+      ]
+    },
+    "process": {
+      "title": "開通流程",
+      "pcImage": {
+        "src": "img/process-pc.png",
+        "alt": "開通流程桌機版"
+      },
+      "mobileImage": {
+        "src": "img/process-mobile.png",
+        "alt": "開通流程手機版"
+      }
+    },
+    "qa": {
+      "title": "常見問題",
+      "initialVisibleCount": 5,
+      "batchSize": 2,
+      "items": [
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "PPA Plus 優惠方案說明",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": ""
+            },
+            {
+              "type": "list",
+              "items": [
+                "本優惠方案限定中華電信 4G 及 5G 月租型客戶申請。",
+                "KKBOX 優惠方案可於全台服務中心（含特約服務中心）、客服中心（0800-000-123）及中華電信網路門市申請。",
+                "PPA Plus 所提供之優惠方案僅能擇一申請，不得同時申請、併用或合併享有優惠內容。",
+                "單月租方案：中華電信行動客戶皆可申請，無須綁約，月租原價為每月 299 元，最短租期一個月。",
+                {
+                  "parts": [
+                    {
+                      "type": "text",
+                      "text": "年約方案：中華電信行動客戶皆可申請，依綁約期間享以下優惠價格，綁約 12 個月享優惠月租 249 元，租期屆至後恢復原價 299 元；綁約 24 個月享優惠月租 229 元，租期屆至後恢復原價 229 元。客戶於約期屆滿後，除客戶租期屆滿主動申請退租外，租期屆至後，客戶將以原價格（$299元）租用本方案。合約租期屆滿後，客戶如不繼續申租，需自行透過中華電信服務中心（含神腦特約服務中心）或客服中心（0800-000-123）取消服務。PPA Plus 服務支援系統需求請參考"
+                    },
+                    {
+                      "type": "link",
+                      "text": "PPA 網頁說明",
+                      "href": "https://intercom.help/pressplay-academy/zh-TW/articles/10441035"
+                    }
+                  ]
+                },
+                "年約優惠方案於 12/24 月租期內享月租費優惠，如欲提前解約，須依實際已享加值優惠月租費金額（原價-月租優惠）返還補貼款。補貼款計算方式：依未滿約期之日數比例計算。",
+                "透過行動上網使用本活動方案各項加值服務產生之行動上網傳輸費，依申請之資費方案計收；客戶在國外使用加值服務時，須額外支付國際漫遊費用。",
+                "申請本活動方案後，於合約期間內欲退租本活動方案或提前解約（包含但不限於取消服務、門號退租、一退一租、欠拆及 NP 移出、轉預付卡等），須至中華電信各地營業窗口或特約服務中心辦理，且應以現金繳納本方案優惠補貼款（本方案補貼款計算方式：依實際已享本方案月租費優惠金額（原價-月租優惠）並依未滿約期之日數比例計算，不接受以刷卡或其他方式辦理）。若因門號欠拆、退租後復租，則本方案即時停止，日後原號或新號復租本優惠亦不恢復或遞延，但可於本方案優惠期間重新申請。",
+                {
+                  "parts": [
+                    {
+                      "type": "text",
+                      "text": "PPA Plus月租服務，訂閱期間可不限次數觀看方案內所有精選內容，並會持續每月更新內容。在 PPA 看到標示「Plus」的課程，即可直接觀看。也可前往精選內容清單查看，如有其他 PPA Plus 相關問題請"
+                    },
+                    {
+                      "type": "link",
+                      "text": "聯繫 PPA 客服",
+                      "href": "https://intercom.help/pressplay-academy/zh-TW/articles/8841551-%E8%81%AF%E7%B5%A1%E5%AE%A2%E6%9C%8D"
+                    },
+                    {
+                      "type": "text",
+                      "text": "。本加值服務所提供之影音、規格、功能及品質等內容皆以 PPA 提供為準。"
+                    }
+                  ]
+                },
+                "中華電信保留本優惠活動修改、變動、終止之權利，恕不另行通知，更多詳情請參照中華電信網站公告。"
+              ]
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "什麼是 PPA Plus，有什麼優點？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": "PPA Plus 是為忙碌現代人設計的口袋大學，每天不到 10 元，就能高效學習跨領域精華內容，滿足你對跨界探索的好奇心。"
+            },
+            {
+              "type": "heading",
+              "text": "Plus 會員專屬權益包含："
+            },
+            {
+              "type": "list",
+              "items": [
+                "每月獨家課程：每月 1-2 堂 PPA Plus 會員限定課程，邀請各界明星講師分享獨家心法，讓你跟著大師學。",
+                "每月解鎖明星課程：解鎖一堂明星課程完整觀看，享受跨領域學習的新鮮感。",
+                "1500+精選內容：匯集多元講師主題觀點，讓你擁有源源不絕的新知識。",
+                {
+                  "parts": [
+                    {
+                      "type": "link",
+                      "text": "專屬學習點數",
+                      "href": "https://www.pressplay.cc/member/checkin?tab=ppa_plus"
+                    },
+                    {
+                      "type": "text",
+                      "text": "回饋：看完學習內容即可累積點數，透過實質點數鼓勵你持續成長。"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "我不是中華電信手機門號可以申請嗎？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": "目前本服務限定中華電信 4G 及 5G 月租型客戶申請。"
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "申請後可以立即使用PPA Plus服務嗎？如何開通啟用PPA Plus呢？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": "申請後您會收到一則服務開通簡訊，請點選簡訊內的開通連結，進行 PPA Plus 帳戶開通啟用服務。"
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "PPA Plus 服務後申辦後，如果沒收到開通簡訊或是簡訊連結失效怎麼辦？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "parts": [
+                {
+                  "type": "text",
+                  "text": "您可透過右方網址立即進行開通啟用作業，"
+                },
+                {
+                  "type": "link",
+                  "text": "立即開通PPA Plus",
+                  "href": "https://cpsg.cht.com.tw/cpsp_ui/show_otp?OTT_ID=CHT_LXP_PPA&ReturnURL=https%3A%2F%2Fwww.pressplay.cc%2Factivate%2Fpartners%2Fcht&ServiceName=PressPlay"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "我已經透過其他管道訂閱 PPA Plus，還可以申請中華電信 PPA Plus方案嗎？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": "如已經訂閱 PPA Plus 服務，請先至原訂閱管道取消訂閱，取消服務後，並待該其服務期間結束後，再至中華電請訂閱，以避免重複扣款。"
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "取消 PPA Plus 後，請問可以用到什麼時候？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": "當您取消 PPA Plus 服務後，服務將立即停止。月租費將依實際訂閱天數按比例計算費用。"
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "PPA Plus 可以同時連接多少部裝置？能在多個裝置上同時聆聽嗎？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": "PPA Plus 服務支援同時使用 1 個網頁瀏覽器及 2 個 App 裝置，若超過裝置數量上限，PPA 系統將自動登出先前已登入的裝置。"
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "我已經申請中華電信 PPA Plus 方案，要如何查詢方案內容跟到期日呢？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "parts": [
+                {
+                  "type": "text",
+                  "text": "欲查詢您已申請的中華電信 PPA Plus 方案與到期日，可至中華電信官網「精采生活+」服務專區，點選「我的精采服務」查詢。"
+                },
+                {
+                  "type": "link",
+                  "text": "我的精采生活+ | 中華電信我的服務中心",
+                  "href": "https://123.cht.com.tw/DigitalServices"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "questionNumber": "",
+          "questionPrefix": "",
+          "question": "PPA Plus 內的課程內容與 PPA (PressPlay Academy) 所購買的單堂課程之間差在哪裡？",
+          "answerBlocks": [
+            {
+              "type": "paragraph",
+              "prefix": "",
+              "text": "PPA Plus 讓你以最少的時間廣泛探索，累積豐富知識內容；PPA 單堂課則讓你選定目標，紮實學習系統化知識。可根據你的學習目標來選擇："
+            },
+            {
+              "type": "heading",
+              "text": ""
+            },
+            {
+              "type": "list",
+              "items": [
+                "每月獨家課程：每月 1-2 堂 PPA Plus 會員限定課程，邀請各界明星講師分享獨家心法，讓你跟著大師學。",
+                "每月解鎖明星課程：解鎖一堂明星課程完整觀看，享受跨領域學習的新鮮感。",
+                "1500+精選內容：匯集多元講師主題觀點，讓你擁有源源不絕的新知識。",
+                {
+                  "parts": [
+                    {
+                      "type": "link",
+                      "text": "專屬學習點數",
+                      "href": "https://www.pressplay.cc/member/checkin?tab=ppa_plus"
+                    },
+                    {
+                      "type": "text",
+                      "text": "回饋：看完學習內容即可累積點數，透過實質點數鼓勵你持續成長。"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "fixedPlus": {
+    "href": "#",
+    "text": "PPA Plus 帳戶啟用/查詢"
+  }
+}
