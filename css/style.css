@@ -2,6 +2,67 @@ body {
   font-weight: 400 !important;
 }
 
+header nav.nav-global {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+header nav .logo-section {
+  position: relative;
+  z-index: 3;
+  flex: 0 0 auto;
+}
+
+header nav .logo-section a.logo {
+  display: block;
+  position: relative;
+  z-index: 4;
+  background: url("../img/cht_ppa.svg") no-repeat;
+  background-size: contain;
+  background-position: center left;
+  width: 210px;
+  height: 46px;
+  margin-right: 24px;
+}
+
+header nav .menu-section {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+@media screen and (max-width: 1180px) {
+  header nav .menu-section {
+    left: 0;
+  }
+}
+
+header nav .drop-down-menu {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  section#header header nav.nav-global {
+    gap: 8px;
+  }
+  section#header header nav .logo-section a.logo {
+    width: 190px;
+    margin-right: 0;
+  }
+  section#header header nav .menu-section {
+    margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 1023px) {
+  section#header header {
+    min-width: initial !important;
+    max-width: 1142px;
+    padding: 0 !important;
+  }
+}
 .wrapper-box {
   position: relative;
   text-align: left;
@@ -15,10 +76,6 @@ body {
   width: 50%;
   fill: currentColor;
   pointer-events: none;
-}
-
-.swiper-slide {
-  padding: 0.2rem 0 1.5rem;
 }
 
 .news-swiper-controls {
@@ -66,6 +123,14 @@ body {
   background: black;
 }
 
+.section-title {
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .section-title {
+    margin-bottom: 24px;
+  }
+}
 .section-title p {
   margin-bottom: 0;
   font-size: 24px;
@@ -200,13 +265,6 @@ body {
   margin-top: 4px;
 }
 
-#featured-plan-section .swiper-slide {
-  padding-bottom: 0;
-}
-
-.cht-box .swiper-slide {
-  padding-bottom: 0;
-}
 @media (min-width: 768px) {
   .cht-box .swiper-slide {
     padding-bottom: 1.5rem;
@@ -322,14 +380,21 @@ body {
   font-size: 14px;
 }
 
+.author-box .section-title {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
 .author-box .author-title {
   font-size: 1.5rem;
   font-weight: 700;
 }
+.author-box .swiper-wrapper {
+  padding-bottom: 1rem;
+}
 .author-box .author-p {
-  font-size: 1.4rem;
+  font-size: 32px;
   color: #7950F2;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0.2rem 0;
 }
 @media (max-width: 768px) {
