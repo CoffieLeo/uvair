@@ -382,6 +382,11 @@ header nav .drop-down-menu {
   font-size: 1.25rem;
   font-weight: 500;
 }
+@media (max-width: 767px) {
+  .cht-card .month {
+    font-size: 24px;
+  }
+}
 .cht-card .month span {
   font-size: 1rem;
 }
@@ -414,7 +419,7 @@ header nav .drop-down-menu {
 }
 .author-box .author-desc {
   color: #212529;
-  font-size: 1rem;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
   .author-box .author-desc {
