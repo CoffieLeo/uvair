@@ -22,7 +22,7 @@ header nav .logo-section a.logo {
   background: url("../img/cht_ppa.svg") no-repeat;
   background-size: contain;
   background-position: center left;
-  width: 210px;
+  width: 280px;
   height: 46px;
   margin-right: 24px;
 }
@@ -49,11 +49,20 @@ header nav .drop-down-menu {
     gap: 8px;
   }
   section#header header nav .logo-section a.logo {
-    width: 190px;
+    width: 200px;
     margin-right: 0;
   }
   section#header header nav .menu-section {
     margin-left: 0 !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  section#header header nav .logo-section a.logo {
+    background: url("../img/cht_ppa.svg") no-repeat;
+    background-size: contain;
+    background-position: center left;
+    width: 200px;
+    height: 36px;
   }
 }
 @media screen and (max-width: 1023px) {
@@ -270,9 +279,10 @@ header nav .drop-down-menu {
     padding-bottom: 1.5rem;
   }
 }
-
-.swiper-cht {
-  padding-top: 1rem;
+@media (max-width: 767px) {
+  .cht-box .swiper-slide:last-child {
+    padding-bottom: 1.5rem;
+  }
 }
 
 .cht-card {

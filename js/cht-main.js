@@ -741,12 +741,14 @@ const setupFixedPlusBehavior = () => {
         const shouldDock = placeholderBottom <= window.innerHeight;
         const currentScrollY = window.scrollY;
         const scrollDelta = currentScrollY - lastScrollY;
-        const shouldHide = currentScrollY > 40 && scrollDelta < -6;
-        const shouldShow = scrollDelta > 6;
+        const shouldHide = currentScrollY > 40 && scrollDelta > 6;
+        const shouldShow = scrollDelta < -6;
 
         fixedPlusPlaceholder.style.height = `${fixedPlusHeight}px`;
         fixedPlus.classList.toggle('is-docked', shouldDock);
-        if (shouldHide) {
+        if (shouldDock) {
+            fixedPlus.classList.remove('is-hidden');
+        } else if (shouldHide) {
             fixedPlus.classList.add('is-hidden');
         } else if (shouldShow) {
             fixedPlus.classList.remove('is-hidden');
